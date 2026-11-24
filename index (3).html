@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lesat Digital – Digital Marketing untuk UMKM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f1f6ff;--ink:#0a1f3d;--card:#fff;--muted:#4a5f7f;--line:#d3e1f5;--plum:#0a1f3d;--pink:#ff6a1a;--lime:#d8ff3d;--lilac:#7cc4ff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#08162b;--ink:#eef5ff;--card:#10294d;--muted:#9db4d6;--line:#21406b}}
+:root[data-theme="dark"]{--bg:#08162b;--ink:#eef5ff;--card:#10294d;--muted:#9db4d6;--line:#21406b}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Figtree,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Unbounded,Figtree,sans-serif;margin:0;line-height:1.05;letter-spacing:-.03em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.btn{display:inline-block;border:0;cursor:pointer;font:700 16px Figtree,sans-serif;text-decoration:none;padding:15px 28px;border-radius:999px;background:var(--lime);color:var(--plum);transition:transform .2s}
+.btn:hover{transform:rotate(-2deg) scale(1.04)}
+.btn.ghost{background:transparent;color:inherit;border:2px solid currentColor}
+/* hero */
+.hero{background:var(--plum);color:#fff;position:relative;overflow:hidden;border-radius:0 0 48px 48px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font:800 20px Unbounded,sans-serif;text-decoration:none;color:#fff}
+.logo b{color:var(--pink)}
+.top nav{display:flex;gap:24px;font-size:15px}.top nav a{text-decoration:none;opacity:.8}.top nav a:hover{opacity:1}
+.hero-in{padding:50px 0 90px;position:relative}
+.hero h1{font-size:clamp(40px,9vw,104px);font-weight:800;max-width:11ch}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero p{max-width:48ch;font-size:19px;opacity:.88;margin:26px 0 34px}
+.sticker{position:absolute;border-radius:50%;pointer-events:none}
+.s1{width:260px;height:260px;background:var(--pink);right:-60px;top:30px;animation:float 7s ease-in-out infinite}
+.s2{width:120px;height:120px;background:var(--lilac);right:200px;bottom:30px;border-radius:30px;transform:rotate(18deg);animation:float 9s ease-in-out infinite reverse}
+.s3{width:0;height:0;border-left:50px solid transparent;border-right:50px solid transparent;border-bottom:90px solid var(--lime);right:60px;bottom:110px;border-radius:0;animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-22px) rotate(8deg)}}
+.badge{position:absolute;right:30px;top:120px;background:var(--lime);color:var(--plum);font:800 15px Unbounded,sans-serif;padding:14px 18px;border-radius:18px;transform:rotate(-8deg);box-shadow:6px 6px 0 var(--plum)}
+.marquee{background:var(--pink);color:var(--plum);overflow:hidden;white-space:nowrap;padding:14px 0;margin-top:-1px;transform:rotate(-1.2deg);margin:-26px -10px 0;position:relative;z-index:2}
+.marquee div{display:inline-block;font:800 20px Unbounded,sans-serif;animation:run 28s linear infinite}
+@keyframes run{to{transform:translateX(-50%)}}
+section{padding:84px 0}
+.head{max-width:640px;margin-bottom:40px}
+.head h2{font-size:clamp(28px,4.6vw,48px);font-weight:800}
+.head p{color:var(--muted);margin:16px 0 0}
+/* about */
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:center}
+.about p{font-size:20px;margin:0 0 16px}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.nums div{background:var(--card);border:2px solid var(--ink);border-radius:22px;padding:22px;box-shadow:6px 6px 0 var(--ink)}
+.nums div:nth-child(2){background:var(--lime);color:var(--plum);border-color:var(--plum);box-shadow:6px 6px 0 var(--plum)}
+.nums div:nth-child(3){background:var(--pink);color:var(--plum);border-color:var(--plum);box-shadow:6px 6px 0 var(--plum)}
+.nums b{font:800 38px Unbounded,sans-serif;display:block}
+.nums span{font-size:14px}
+/* expertise */
+.exp{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.exp article{background:var(--card);border:2px solid var(--ink);border-radius:26px;padding:28px;transition:transform .25s}
+.exp article:nth-child(odd){transform:rotate(-1.2deg)}.exp article:nth-child(even){transform:rotate(1.2deg)}
+.exp article:hover{transform:rotate(0) translateY(-6px)}
+.exp i{display:grid;place-items:center;width:54px;height:54px;border-radius:16px;font-size:26px;font-style:normal;margin-bottom:16px}
+.exp article:nth-child(1) i{background:var(--lime)}.exp article:nth-child(2) i{background:var(--pink)}.exp article:nth-child(3) i{background:var(--lilac)}.exp article:nth-child(4) i{background:#ffd23d}
+.exp i{color:var(--plum)}
+.exp h3{font-size:20px;margin-bottom:10px}
+.exp p{margin:0;color:var(--muted);font-size:16px}
+/* services tabs */
+.tabs{background:var(--plum);color:#fff;border-radius:40px;padding:clamp(24px,5vw,56px)}
+.tabbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.tabbar button{font:700 15px Figtree,sans-serif;border:2px solid #ffffff55;background:transparent;color:#fff;padding:11px 20px;border-radius:999px;cursor:pointer}
+.tabbar button[aria-selected="true"]{background:var(--lime);color:var(--plum);border-color:var(--lime)}
+.panel{display:none;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.panel.on{display:grid;animation:pop .35s ease}
+@keyframes pop{from{opacity:0;transform:translateY(12px)}}
+.panel h3{font-size:clamp(26px,4vw,38px);margin-bottom:12px}
+.panel p{opacity:.85;margin:0}
+.panel ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.panel li{background:#ffffff14;border-radius:16px;padding:14px 18px 14px 50px;position:relative;font-weight:600}
+.panel li::before{content:"✓";position:absolute;left:16px;top:50%;transform:translateY(-50%);width:24px;height:24px;border-radius:50%;background:var(--pink);color:var(--plum);display:grid;place-items:center;font-size:14px}
+/* work */
+.work{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.case{border-radius:28px;padding:26px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;color:var(--plum);transition:transform .25s,border-radius .25s}
+.case:hover{transform:translateY(-8px);border-radius:28px 70px 28px 70px}
+.case:nth-child(1){background:var(--lime)}.case:nth-child(2){background:var(--pink)}.case:nth-child(3){background:var(--lilac)}.case:nth-child(4){background:#ffd23d}
+.case small{font-weight:700}
+.case h3{font-size:22px;margin:8px 0}
+.case b{font:800 44px Unbounded,sans-serif;line-height:1}
+.case span{font-size:14px;display:block;margin-top:4px}
+/* quote */
+.quote{text-align:center;max-width:820px;margin:0 auto}
+.quote p{font:500 clamp(22px,3.6vw,34px)/1.3 Unbounded,sans-serif;margin:0 0 20px;letter-spacing:-.02em}
+.quote small{color:var(--muted)}
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.contact h2{font-size:clamp(30px,5vw,54px);font-weight:800}
+.contact .info{margin-top:24px;color:var(--muted)}
+form{display:grid;gap:14px;background:var(--card);border:2px solid var(--ink);border-radius:30px;padding:28px;box-shadow:8px 8px 0 var(--pink)}
+label{display:grid;gap:6px;font-weight:700;font-size:15px}
+input,select,textarea{font:inherit;font-weight:400;padding:13px 15px;border-radius:14px;border:2px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+footer{padding:30px 0 44px;color:var(--muted);font-size:14px;text-align:center}
+@media (max-width:820px){.about,.contact,.panel.on{grid-template-columns:1fr}.top nav{display:none}.sticker.s1{width:170px;height:170px;opacity:.9}.badge{display:none}.hero-in{padding-bottom:70px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+.exp.all article i{background:var(--lime)}.exp.all article:nth-child(3n+2) i{background:var(--pink)}.exp.all article:nth-child(3n) i{background:var(--lilac)}.exp.all article{transform:none}.exp.all article:hover{transform:translateY(-6px)}
+.contact .info{overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="sticker s1"></div><div class="sticker s2"></div><div class="sticker s3"></div>
+  <div class="wrap">
+    <div class="top"><a class="logo" href="#">lesat<b>.</b>digital</a>
+      <nav><a href="#keahlian">Keunggulan</a><a href="#layanan">Layanan</a><a href="#semua-layanan">Semua layanan</a><a href="#karya">Karya</a><a href="#kerjasama">Paket</a><a href="#kontak">Kontak</a></nav>
+      <a class="btn" style="padding:10px 20px;font-size:14px" href="#kontak">Ngobrol yuk</a></div>
+    <div class="hero-in">
+      <div class="badge">Marketing<br>untuk UMKM</div>
+      <h1>Usaha Anda melesat, <em>penjualan ikut naik.</em></h1>
+      <p>Jasa digital marketing untuk UMKM: SEO, Google Ads, media sosial, dan website yang membuat usaha Anda mudah ditemukan dan ramai pembeli.</p>
+      <a class="btn" href="#kontak">Mulai proyek</a> <a class="btn ghost" href="#karya">Lihat karya</a>
+    </div>
+  </div>
+</div>
+<div class="marquee" aria-hidden="true"><div>SEO ✺ Google Ads ✺ Instagram ✺ TikTok ✺ Website ✺ Google Maps ✺ Marketplace ✺ WhatsApp ✺ SEO ✺ Google Ads ✺ Instagram ✺ TikTok ✺ Website ✺ Google Maps ✺ Marketplace ✺ WhatsApp ✺ SEO ✺ Google Ads ✺ Instagram ✺ TikTok ✺ Website ✺ Google Maps ✺ Marketplace ✺ WhatsApp ✺ </div></div>
+
+<section><div class="wrap about">
+  <div>
+    <h2 style="font-size:clamp(28px,4.6vw,46px);font-weight:800;margin-bottom:22px">Usaha kecil pantas punya pemasaran yang jelas dan terjangkau.</h2>
+    <p>Lesat Digital membantu warung, toko, kafe, dan usaha jasa tampil di Google, Instagram, TikTok, dan marketplace. Kami pahami dulu usaha dan pelanggan Anda, lalu jalankan langkah yang hasilnya bisa dihitung.</p>
+    <p style="color:var(--muted);font-size:17px">Harga paket tertulis jelas, laporan memakai bahasa yang mudah dipahami, dan Anda bisa mulai dari anggaran kecil.</p>
+  </div>
+  <div class="nums">
+    <div><b>12</b><span>layanan digital marketing dalam satu tempat</span></div>
+    <div><b>Rp1,5 jt</b><span>harga paket mulai, tanpa biaya kejutan</span></div>
+    <div><b>1 hari</b><span>waktu balasan untuk konsultasi gratis</span></div>
+    <div><b>3 paket</b><span>sesuai ukuran dan anggaran usaha Anda</span></div>
+  </div>
+</div></section>
+
+<section id="keahlian" style="padding-top:0"><div class="wrap">
+  <div class="head"><h2>Kenapa UMKM memilih kami</h2><p>Empat hal yang membuat pemasaran digital terasa mudah dan tidak menakutkan.</p></div>
+  <div class="exp">
+    <article><i>🎯</i><h3>Fokus untuk usaha kecil</h3><p>Kami paham anggaran terbatas, jadi setiap langkah dipilih yang paling cepat memberi hasil.</p></article>
+    <article><i>💬</i><h3>Bahasa yang mudah</h3><p>Tanpa istilah rumit. Setiap laporan menjelaskan apa yang terjadi dan apa langkah berikutnya.</p></article>
+    <article><i>💸</i><h3>Harga jelas</h3><p>Paket dan harga tertulis dari awal. Biaya iklan dibayar langsung ke platform, bukan lewat kami.</p></article>
+    <article><i>📈</i><h3>Hasil terukur</h3><p>Pesanan, pesan WhatsApp, dan kunjungan toko dicatat, jadi Anda tahu iklan mana yang berhasil.</p></article>
+  </div>
+</div></section>
+
+<section id="layanan" style="padding-top:0"><div class="wrap"><div class="tabs">
+  <div class="head" style="margin-bottom:26px"><h2>Layanan sesuai tahap usaha Anda</h2></div>
+  <div class="tabbar" role="tablist">
+    <button role="tab" aria-selected="true" data-t="0">Baru mulai</button>
+    <button role="tab" aria-selected="false" data-t="1">Cari pembeli</button>
+    <button role="tab" aria-selected="false" data-t="2">Jaga pelanggan</button>
+    <button role="tab" aria-selected="false" data-t="3">Ukur hasil</button>
+  </div>
+  <div class="panel on"><div><h3>Biar usaha Anda mulai dikenal</h3><p>Fondasi sederhana agar calon pembeli bisa menemukan dan menghubungi Anda.</p></div><ul><li>Logo dan tampilan brand</li><li>Akun Instagram dan TikTok usaha</li><li>Google Maps (Google Business)</li><li>Landing page dengan tombol WhatsApp</li></ul></div>
+  <div class="panel"><div><h3>Biar ditemukan saat orang mencari</h3><p>Muncul tepat ketika calon pembeli sedang mencari produk atau jasa Anda.</p></div><ul><li>SEO dan Google Maps lokal</li><li>Google Ads</li><li>Iklan Instagram dan TikTok</li><li>Iklan Shopee dan Tokopedia</li></ul></div>
+  <div class="panel"><div><h3>Biar pembeli kembali lagi</h3><p>Pelanggan lama lebih murah dirawat daripada mencari pelanggan baru.</p></div><ul><li>Broadcast promo WhatsApp</li><li>Email marketing</li><li>Program diskon dan member</li><li>Balasan otomatis pertanyaan umum</li></ul></div>
+  <div class="panel"><div><h3>Biar tahu mana yang untung</h3><p>Setiap rupiah iklan dicek hasilnya, lalu anggaran dipindah ke yang paling efektif.</p></div><ul><li>Pelacakan pesanan dan pesan masuk</li><li>Laporan mingguan sederhana</li><li>Evaluasi bulanan</li><li>Saran langkah berikutnya</li></ul></div>
+</div></div></section>
+
+<section id="semua-layanan" style="padding-top:0"><div class="wrap">
+  <div class="head"><h2>Semua layanan digital marketing</h2><p>Dari membuat Anda ditemukan sampai mengubah pengunjung menjadi pembeli. Pilih satu atau gabungkan.</p></div>
+  <div class="exp all">
+<article><i>🔍</i><h3>SEO</h3><p>Optimasi website agar muncul di halaman pertama Google: riset kata kunci, perbaikan teknis, dan konten.</p></article>
+<article><i>💰</i><h3>Google Ads</h3><p>Iklan pencarian dan display yang tampil saat calon pembeli mencari produk Anda, dibayar per klik.</p></article>
+<article><i>📱</i><h3>Social media ads</h3><p>Iklan berbayar di Instagram, Facebook, dan TikTok dengan target audiens yang tepat.</p></article>
+<article><i>🗓️</i><h3>Kelola media sosial</h3><p>Perencanaan konten, jadwal posting, desain, dan balasan komentar setiap hari.</p></article>
+<article><i>✍️</i><h3>Content marketing</h3><p>Artikel, video, dan infografis yang menjawab kebutuhan audiens dan membangun kepercayaan.</p></article>
+<article><i>⭐</i><h3>Influencer marketing</h3><p>Memilih dan mengelola kreator yang cocok dengan brand, lengkap dengan laporan hasil.</p></article>
+<article><i>✉️</i><h3>Email &amp; WhatsApp marketing</h3><p>Pesan promo dan follow-up terjadwal untuk menjaga pelanggan lama tetap kembali.</p></article>
+<article><i>🌐</i><h3>Pembuatan website</h3><p>Website dan landing page yang cepat, rapi di HP, dan dirancang agar pengunjung jadi pembeli.</p></article>
+<article><i>🛒</i><h3>Marketplace ads</h3><p>Optimasi toko dan iklan di Shopee dan Tokopedia agar produk lebih mudah ditemukan.</p></article>
+<article><i>🎬</i><h3>Produksi kreatif</h3><p>Foto produk, video pendek, dan desain visual yang siap dipakai untuk iklan.</p></article>
+<article><i>🏷️</i><h3>Branding</h3><p>Nama, logo, warna, dan gaya bahasa agar brand mudah dikenali dan diingat.</p></article>
+<article><i>📊</i><h3>Analitik &amp; laporan</h3><p>Dashboard dan laporan rutin yang menunjukkan iklan mana yang menghasilkan penjualan.</p></article>
+  </div>
+</div></section>
+
+<section id="karya" style="padding-top:0"><div class="wrap">
+  <div class="head"><h2>Contoh hasil yang bisa dicapai</h2><p>Studi kasus ilustrasi untuk keperluan tugas, bukan data klien nyata.</p></div>
+  <div class="work">
+    <div class="case"><div><small>Kuliner · Instagram &amp; Reels</small><h3>Warung Seblak Bu Rina</h3></div><div><b>+180%</b><span>pesanan dalam 8 minggu</span></div></div>
+    <div class="case"><div><small>Fesyen · Iklan Shopee</small><h3>Toko Hijab Kita</h3></div><div><b>4,3x</b><span>return dari biaya iklan</span></div></div>
+    <div class="case"><div><small>Jasa · Google Maps &amp; SEO</small><h3>Bengkel Jaya Motor</h3></div><div><b>Top 3</b><span>di Google Maps untuk 5 kata kunci lokal</span></div></div>
+    <div class="case"><div><small>Kecantikan · Website &amp; WhatsApp</small><h3>Glow Alami</h3></div><div><b>2,5x</b><span>lebih banyak pesan masuk per bulan</span></div></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap quote">
+  <p>“Dulu saya posting kalau sempat saja. Sekarang ada jadwal, iklannya jelas, dan pesanan lewat WhatsApp naik setiap minggu.”</p>
+  <small>Bu Rina, pemilik warung seblak (testimoni ilustrasi)</small>
+</div></section>
+
+<section id="kerjasama" style="padding-top:0"><div class="wrap">
+  <div class="head"><h2>Paket untuk UMKM</h2><p>Harga contoh dan bisa disesuaikan. Biaya iklan dibayar terpisah langsung ke platform.</p></div>
+  <div class="exp">
+    <article><i>🌱</i><h3>Starter</h3><p><b>Rp1,5 juta/bulan.</b> 1 platform media sosial, 12 konten per bulan, dan laporan bulanan. Cocok untuk usaha yang baru mulai.</p></article>
+    <article><i>🌐</i><h3>Website</h3><p><b>Rp2,5 juta sekali bayar.</b> Landing page rapi di HP, tombol WhatsApp, peta lokasi, dan SEO dasar.</p></article>
+    <article><i>📈</i><h3>Tumbuh</h3><p><b>Rp3,5 juta/bulan.</b> 2 platform, iklan berbayar, 20 konten, optimasi Google Maps atau marketplace, laporan mingguan.</p></article>
+    <article><i>🚀</i><h3>Skala</h3><p><b>Rp6 juta/bulan.</b> Semua kanal, produksi foto dan video, WhatsApp marketing, dan konsultasi rutin.</p></article>
+  </div>
+</div></section>
+
+<section id="kontak" style="background:var(--card);border-radius:48px 48px 0 0"><div class="wrap contact">
+  <div><h2>Siap melesat? Ayo ngobrol.</h2>
+  <p class="info">Ceritakan usaha dan target Anda, kami balas dalam 1 hari. Konsultasi pertama gratis.<br><br>📍 Jakarta<br>✉️ sartikarevinapangaribuan@gmail.com<br>📸 @sartikarevinapangaribuan<br>💬 0821-6012-0871</p></div>
+  <form id="f">
+    <label>Nama<input name="nama" required autocomplete="name"></label>
+    <label>Nama usaha<input name="bisnis" autocomplete="organization"></label>
+    <label>Yang Anda butuhkan<select name="butuh"><option>SEO</option><option>Google Ads</option><option>Iklan media sosial</option><option>Kelola media sosial</option><option>Pembuatan website</option><option>Iklan marketplace</option><option>Belum tahu, mau diskusi</option></select></label>
+    <label>Pesan<textarea name="pesan" rows="3" placeholder="Ceritakan usaha dan target Anda"></textarea></label>
+    <a id="wa" class="btn" href="https://wa.me/6282160120871" target="_blank" rel="noopener" style="background:var(--pink);color:var(--plum);text-align:center">Kirim lewat WhatsApp</a>
+  </form>
+</div>
+<footer>© 2026 Lesat Digital. Seluruh hak dilindungi.</footer></section>
+
+<script>
+var tb=document.querySelectorAll('.tabbar button'),pn=document.querySelectorAll('.panel');
+tb.forEach(function(b){b.addEventListener('click',function(){
+  tb.forEach(function(x){x.setAttribute('aria-selected',x===b)});
+  pn.forEach(function(p,i){p.classList.toggle('on',i==b.dataset.t)});
+})});
+var f=document.getElementById('f'),wa=document.getElementById('wa');
+function link(){var d=new FormData(f);
+  var t='Halo Lesat Digital, saya '+(d.get('nama')||'(nama)')+(d.get('bisnis')?' dari '+d.get('bisnis'):'')+'. Saya butuh: '+d.get('butuh')+'.'+(d.get('pesan')?' '+d.get('pesan'):'');
+  wa.href='https://wa.me/6282160120871?text='+encodeURIComponent(t);}
+f.addEventListener('input',link);f.addEventListener('change',link);link();
+wa.addEventListener('click',function(e){if(!f.nama.value.trim()){e.preventDefault();f.nama.focus();f.nama.reportValidity();}});
+f.addEventListener('submit',function(e){e.preventDefault();link();window.open(wa.href,'_blank');});
+</script>
+</body>
+</html>
